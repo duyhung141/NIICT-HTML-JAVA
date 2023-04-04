@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="box-1">
+            <div class="square-1"></div>
+            <div class="square-2"></div>
+        </div>
+        <div class="box-2">
+            <div class="square-1"></div>
+            <div class="square-2"></div>
+            <div class="square-3"></div>
+            <div class="square-4"></div>
+        </div>
+        <div class="box-3">
+            <div class="rectangle-1"></div>
+            <div class="rectangle-2"></div>
+            <div class="rectangle-3"></div>
+            <div class="rectangle-4"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box-4">
+            <div class="square-1"></div>
+            <div class="square-2"></div>
+            <div class="square-3"></div>
+        </div>
+
+        <div class="box-5">
+            <div class="square-1"></div>
+            <div class="square-2"></div>
+            <div class="square-3"></div>
+        </div>
+        <div class="login">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white">
+                <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/>
+            </svg>
+            <input class="input-user" type="text" placeholder="USERNAME">
+            <input class="input-pass" type="password" placeholder="PASSWORD">
+
+            <div class="btn">
+                <button class="btn-login">Login</button>
+                <a href="#" class="login-forgot">Forgot password?</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        width: 100%;
+        height: 720px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .box-1 {
+        width: 146px;
+        height: 126px;
+        background-color: #C4C4C4;
+        position: relative;
+    }
+
+    .box-1 .square-1 {
+        width: 55px;
+        height: 55px;
+        background-color: #EB5757;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .box-1 .square-2 {
+        width: 55px;
+        height: 55px;
+        background-color: #F2994A;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .box-2 {
+        width: 146px;
+        height: 146px;
+        position: relative;
+    }
+
+    .box-2 .square-1 {
+        width: 55px;
+        height: 55px;
+        background-color: #F2994A;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(45deg);
+    }
+
+    .box-2 .square-2 {
+        width: 55px;
+        height: 55px;
+        background-color: #9B51E0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: rotate(45deg);
+    }
+
+    .box-2 .square-3 {
+        width: 55px;
+        height: 55px;
+        background-color: #2F80ED;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: rotate(45deg);
+    }
+
+    .box-2 .square-4 {
+        width: 55px;
+        height: 55px;
+        background-color: #EB5757;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: rotate(45deg);
+    }
+
+    .box-3 {
+        width: 224px;
+        height: 237px;
+        background-color: #C4C4C4;
+        position: relative;
+    }
+
+    .box-3 .rectangle-1 {
+        width: 100%;
+        height: 31px;
+        background-color: #EB5757;
+        position: absolute;
+        top: 0;
+    }
+
+    .box-3 .rectangle-2 {
+        width: 149px;
+        height: 126px;
+        background-color: #F2994A;
+        position: absolute;
+        top: 44px;
+        left: 0;
+    }
+
+    .box-3 .rectangle-3 {
+        width: 64px;
+        height: 126px;
+        background-color: #EB5757;
+        position: absolute;
+        top: 44px;
+        right: 0;
+    }
+
+    .box-3 .rectangle-4 {
+        width: 100%;
+        height: 34px;
+        background-color: #9B51E0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .box-4 {
+        width: 165px;
+        height: 110px;
+        position: relative;
+    }
+
+    .box-4 .square-1, .box-4 .square-2, .box-4 .square-3 {
+        width: 55px;
+        height: 55px;
+        background-color: #F2994A;
+        position: absolute;
+    }
+
+    .box-4 .square-1 {
+        top: 0;
+        left: 0;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .box-4 .square-2 {
+        bottom: 0;
+        left: 55px;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .box-4 .square-3 {
+        top: 0;
+        right: 0px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .box-5 {
+        height: 250px;
+        display: flex;
+        flex-flow: column;
+        gap: 23px;
+    }
+
+    .box-5 .square-1, .box-5 .square-2, .box-5 .square-3 {
+        width: 55px;
+        height: 55px;
+        background-color: #2F80ED;
+        transform: rotate(45deg);
+    }
+
+    .login {
+        width: 339px;
+        height: 339px;
+        background-color: #F2994A;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login svg{
+        width: 30px;
+        height: 30px;
+    }
+
+    .login .input-user, .login .input-pass {
+        padding: 10px;
+        border: 1px solid #FFFFFF;
+        margin: 10px;
+        background-color: #F2994A;
+        border-radius: 5px;
+    }
+
+    .login .input-user::placeholder, .login .input-pass::placeholder {
+        color: white;
+    }
+
+    .login .btn {
+        position: relative;
+    }
+
+    .login .btn-login {
+        text-transform: uppercase;
+        width: 195px;
+        height: 40px;
+        background-color: #9B51E0;
+        color: white;
+        margin: 10px 0 20px 0;
+    }
+
+    .login .login-forgot {
+        text-decoration: none;
+        color: white;
+        font-size: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+    }
+
+    .login .btn a:hover, .login .btn button:hover {
+        opacity: 60%;
+    }
+</style>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="wrapper">
+    <p>This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p>This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+</div>
+<div id="copy-wrapper">
+
+</div>
+<button onclick="copyWrapper()" id="btn">Copy</button>
+</body>
+<script !src="">
+
+    // let mang = [
+    //     "This is paragraph 1",
+    //     "This is paragraph 2",
+    //     "This is paragraph 3",
+    //     "This is paragraph 4",
+    //     "This is paragraph 5"
+    // ]
+    //
+    // for (let i = 0; i < mang.length; i++) {
+    //     var tag = document.createElement('p')
+    //     var text = document.createTextNode(mang[i]);
+    //     tag.appendChild(text);
+    //
+    //     var wrapper = document.querySelector('#wrapper');
+    //     wrapper.appendChild(tag);
+    //     // document.querySelector('.paragraph-' + (i + 1)).innerHTML = mang[i];
+    // }
+    function copyWrapper(){
+        var wrapper = document.querySelector('#wrapper').children;
+        console.log(wrapper)
+        var copyWrapper = document.querySelector('#copy-wrapper');
+        for (let i=0;i<wrapper.length;i++){
+            var str = wrapper[i].cloneNode(true);
+            copyWrapper.appendChild(str);
+
+        }
+
+    }
+</script>
+</html>

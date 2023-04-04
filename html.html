@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div id="header">header</div>
+    <div id="navigation-menu">navigation menu</div>
+    <div class="content">
+        <div class="content-1">content</div>
+        <div class="main-content">main content</div>
+        <div class="content-2">content</div>
+    </div>
+    <div id="footer">footer</div>
+</div>
+
+</body>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0px;
+    }
+
+    #header {
+        text-align: center;
+        background-color: rgb(235, 230, 230);
+        margin: 10px 0px;
+        height: 100px;
+        border: 1px solid black;
+
+    }
+
+    #navigation-menu {
+        text-align: center;
+        background-color: rgb(235, 230, 230);
+        height: 50px;
+        border: 1px solid black;
+
+    }
+
+    .content {
+        height: 200px;
+        margin: 10px 0px;
+    }
+
+    .content-1 {
+        text-align: center;
+        background-color: rgb(235, 230, 230);
+        float: left;
+        border: 1px solid black;
+        width: 30%;
+        height: 200px;
+        margin-right: 10px;
+    }
+
+    .main-content {
+        text-align: center;
+        background-color: rgb(235, 230, 230);
+        border: 1px solid black;
+        width: 38%;
+        height: 200px;
+        float: left;
+        margin: 0px 5px;
+    }
+
+    .content-2 {
+        text-align: center;
+        background-color: rgb(235, 230, 230);
+        float: left;
+        border: 1px solid black;
+        width: 30%;
+        height: 200px;
+        margin-left: 10px;
+    }
+
+    #footer {
+        text-align: center;
+        background-color: rgb(235, 230, 230);
+        height: 100px;
+        border: 1px solid black;
+
+    }
+</style>
+<script>
+    //Bai 1
+    let a = 10, b = 20, c = 40;
+    let max=0;
+    if((a>b&&a>c)) {
+        max = a;
+    }else if((b>a&&b>c)) max = b;
+    else if((c>b&&c>a)) max = c;
+    console.log(max);
+
+
+    //Bài 2
+    let a2=6;
+    let sum=0;
+    for(let i=1;i<a2;i++){
+        if(a2%i==0) sum+=i;
+    }
+    if(sum==a2) console.log("Đây là số hoàn hảo");
+    else console.log("Đây không phải số hoàn hảo");
+
+    //Bài 3
+    let b3 = 7;
+    let check=true;
+    for(let i=2;i<b3;i++){
+        if(b3%i==0) check=false;
+    }
+    if(check) console.log("Đây là số nguyên tố");
+    else console.log("Đây không phải là số nguyên tố");
+
+    //Bài 4
+    let a4=2;
+    if(a4%2==0) console.log("Đây là số chẵn");
+    else console.log("Đây là số lẻ");
+</script>
+</html>

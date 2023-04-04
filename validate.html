@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form onsubmit="return validation()">
+    <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <p class="validateUsername" style="color: red"></p>
+    </div>
+
+    <div><label for="password">Password</label>
+        <input type="text" name="password" id="password">
+        <p class="validatePassword" style="color: red"></p>
+
+    </div>
+    <button>Submit</button>
+</form>
+</body>
+<script>
+    function validation() {
+        const nodeUsername=document.querySelector('#username');
+        const txtUsername=nodeUsername.value;
+        const nodePassword=document.querySelector('#password');
+        const txtPassword=nodePassword.value;
+        let validateUsername = document.querySelector('.validateUsername');
+        let validatePassword = document.querySelector('.validatePassword');
+        validateUsername.innerText='';
+        validatePassword.innerText='';
+
+        if(txtUsername==''){
+            validateUsername.innerText='Hãy nhập Username';
+            return false
+        }
+
+        if(txtPassword==''){
+            validatePassword.innerText='Hãy nhập Password';
+            return false
+        }
+        return true;
+    }
+</script>
+</html>

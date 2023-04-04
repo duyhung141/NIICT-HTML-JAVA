@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="username" style="height: 50px">
+                <label for="username-input">Username</label>
+                <input type="text" placeholder="Enter Username" name="username-input" id="username-input">
+                <i class="err_username" style="color: red;font-size: 12px; display: none">(*)Không được để trống</i>
+            </div>
+            <div class="password" style="height: 50px">
+                <label for="password-input" >Password</label>
+                <input type="text" placeholder="Enter Password" name="username-input" id="password-input">
+                <i class="err_password" style="color: red;font-size: 12px; display: none">(*)Không được để trống</i>
+            </div>
+            <div class="select" style="height: 50px">
+                <label for="select" >Select</label>
+                <select name="select" id="select">
+                    <option value="">None</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+                <i class="err_select" style="color: red;font-size: 12px; display: none">(*)Không được để trống</i>
+            </div>
+            <button style="background-color: #F2C94C;padding: 10px;border-radius: 5px">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+<style>
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .username input{
+        border-radius: 5px;
+        height: 30px;
+    }
+    .password input{
+        border-radius: 5px;
+        height: 30px;
+    }
+    select{
+        border-radius: 5px;
+        height: 30px;
+    }
+</style>
+<script !src="">
+    $(document).ready(function(){
+        $('#username-input').blur(function (){
+            var txtUsername = $("#username-input").val();
+            if(txtUsername==""){
+                $('.err_username').css('display','block') ;
+            }
+            else{
+                $('.err_username').css('display','none') ;
+            }
+        })
+        $('#password-input').blur(function (){
+            var txtPassword = $("#password-input").val();
+            if(txtPassword==""){
+                $('.err_password').css('display','block') ;
+            }
+            else{
+                $('.err_password').css('display','none') ;
+            }
+        })
+        $('#select').blur(function (){
+            var txtPassword = $("#password-input").val();
+            if(txtPassword==""){
+                $('.err_password').css('display','block') ;
+            }
+            else{
+                $('.err_password').css('display','none') ;
+            }
+        })
+        $('button').click(function (e){
+            var txtUsername = $("#username-input").val();
+            var txtPassword = $("#password-input").val();
+            var select = $('select').val();
+            if(txtUsername==''||txtPassword==""||select==''){
+                e.preventDefault();
+                alert("Hay dien thong tin")
+            }
+        })
+
+    })
+
+</script>
+</html>
